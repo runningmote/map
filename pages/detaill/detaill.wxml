@@ -1,0 +1,20 @@
+<!--pages/detaill/detaill.wxml-->
+<view class="wrap">
+	<view class="mapWrap">
+		<view class="mymap">
+			<map class="map" scale="16" markers="{{markers}}" latitude="{{latitude}}" longitude="{{longitude}}" show-location></map>
+		</view>
+		<view class="pos">
+			<view class="posWrap">
+				<view>
+					<view class="address">{{textData.address}}</view>
+					<text class="names">{{textData.name}}</text>
+				</view>
+				<view class="runLine">
+					<view class="route" bindtap="handleroute" data-markers="{{markers}}">路线</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>

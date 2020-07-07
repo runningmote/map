@@ -1,11 +1,6 @@
 {
   "pages":[
-    "pages/home/home",
-    "pages/detaill/detaill",
-    "pages/info/index",
-    "pages/transits/transits",
-    "pages/qixing/qixing",
-    "pages/buxing/buxing"
+    "pages/home/home"
   ],
   "window":{
     "backgroundTextStyle":"light",
