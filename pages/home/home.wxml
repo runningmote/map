@@ -1,0 +1,16 @@
+ <!-- mark: xxx -->
+ <view class="wrap">
+ 	<view class="containerMap">
+ 		<view class="inp">
+      <view class="inpWrap">
+        <input class="home" bindinput="homeTab" placeholder="输入地点" focus="true" />
+      </view>
+ 			<view class="tip {{tips.length <= 0 || !isInput ? 'dno' : ''}}">
+        <view class="found" data-id="{{index + 1}}" data-latitude="{{latitude}}" data-longitude="{{longitude}}" data-name="{{item.name}}" data-address="{{item.address}}" data-location="{{item.location}}" wx:for="{{tips}}" wx:key="index" bindtap="naviFound">{{item.name}}</view>
+       </view>
+ 		</view>
+ 		<view class="mapWrap">
+ 			<map class="map" id='myMap' scale="16" bindmarkertap="{{makertap}}" markers="{{markers}}" latitude="{{latitude}}" longitude="{{longitude}}" show-location></map>
+ 		</view>
+ 	</view>
+ </view>

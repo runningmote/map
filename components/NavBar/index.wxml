@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="wrap">
+	<view class="wrap-item">
+		<view class="img" bindtap="backtap">
+			<image class="img-item" src="../../images/fanhui.png" />
+		</view>
+		<view class="inp">
+			<input class="inp-item inp-cla" placeholder="输入起点" value="我的位置" focus="true" />
+			<input class="inp-item" placeholder="输入终点" focus="true" />
+		</view>
+	</view>
+	<view class="nav">
+		<view class="runLine" bindtap="jiachetap" data-markers="{{markers}}">驾车</view>
+		<view class="runLine" bindtap="gongjiaotap" data-markers="{{markers}}">公交地铁</view>
+		<view class="runLine" bindtap="qixingtap" data-markers="{{markers}}">骑行</view>
+		<view class="runLine" bindtap="buxingtap" data-markers="{{markers}}">步行</view>
+	</view>
+</view>
