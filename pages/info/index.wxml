@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <NavBar></NavBar>
+  <view class="ditu">
+    <map class="ditu-map" scale="16" markers="{{markers}}" transits="{{transits}}" longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" polyline="{{polyline}}" show-location="true"></map>
+  </view>
+	<view class="detil">
+		<view class="info">
+			<view>{{distance}}米</view>
+			<view>打车约{{cost}}元</view>
+		</view>
+		<view class="btn">
+			<view class="detilInfo">详情</view>
+		</view>
+	</view>
+</view>
