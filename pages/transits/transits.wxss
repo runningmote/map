@@ -1,0 +1,40 @@
+/* pages/transits/transits.wxss */
+.ditu{
+  width:100%;
+  margin-top:10rpx;
+}
+.ditu map{
+  width:100%;
+  height:900rpx;
+}
+.detil{
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:600rpx;
+}
+.info view{
+  margin-left: 30rpx;
+  padding:10rpx 0;
+  font-size: 35rpx;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  padding:20rpx;
+  width:240rpx;
+  background:blue;
+  color:#fff;
+  font-size:30rpx;
+  margin-right: 50rpx;
+  border-radius: 20rpx;
+}
