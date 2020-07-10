@@ -1,5 +1,6 @@
 // pages/detaill/detaill.js
 import amapFile from "../../components/amap-wx"
+const app = getApp()
 Page({
 
   /**
@@ -32,6 +33,7 @@ Page({
       let name = position.name
       let long = position.longitude
       let lat = position.latitude
+      var city = position.city
       let markersData = [{
         id: position.id,
         name: position.name,
@@ -39,6 +41,7 @@ Page({
         latitude: latitude,
         longitude: longitude,
         long:long,
+        city:city,
         lat:lat
       }]
       _this.setData({
@@ -50,6 +53,7 @@ Page({
           name:name
         }
       })
+      app.globalData.userInfo = _this.data.markers
   }else{
     //location为空，需要重新获取经纬度
     var webKey = '844146147dd45a00209f87c48d7f8f21';  //webkey
@@ -102,9 +106,8 @@ Page({
     })
   },
   handleroute(e){
-
     wx.navigateTo({
-      url: '../info/index?position=' + JSON.stringify(e.currentTarget.dataset),
+      url: '../info/index',
     })
   },
 

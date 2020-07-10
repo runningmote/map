@@ -14,17 +14,18 @@ page,.wrap,.mapWrap{
 }
 .pos{
   width:100%;
-  
 }
 .posWrap{
-  margin:20rpx;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin:20rpx;
 }
 .address{
+  
   width:450rpx;
-  font-weight:600rpx;
-  font-size:50rpx;
+  font-size:40rpx;
   overflow:hidden;
   text-overflow:ellipsis; 
   white-space: nowrap;
@@ -41,12 +42,12 @@ page,.wrap,.mapWrap{
 .route{
   display:inline-block;
   width:200rpx;
-  padding:20rpx;
+  padding:10rpx;
   margin-left:10rpx;
   line-height: initial;
   margin-top:20rpx;
   text-align: center;
-  font-size:60rpx;
+  font-size:50rpx;
   background:blue;
   border-radius: 80rpx;
   color:#fff;

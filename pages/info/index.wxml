@@ -1,16 +1,35 @@
 <!--index.wxml-->
 <view class="container">
-  <NavBar></NavBar>
-  <view class="ditu">
-    <map class="ditu-map" scale="16" markers="{{markers}}" transits="{{transits}}" longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" polyline="{{polyline}}" show-location="true"></map>
-  </view>
+	<!--index.wxml-->
+	<view class="wrap">
+		<view class="wrap-item">
+			<view class="img" bindtap="backtap">
+				<image class="img-item" src="../../images/fanhui.png" />
+			</view>
+			<view class="inp">
+				<input class="inp-item inp-cla" placeholder="输入起点" value="我的位置" />
+				<input class="inp-item" placeholder="输入终点" value="{{inputValue}}" />
+			</view>
+		</view>
+		<view class="nav">
+			<view class="runLine" bindtap="jiachetap">驾车</view>
+			<view class="runLine" bindtap="gongjiaotap" data-markers="{{markers}}">公交地铁</view>
+			<view class="runLine" bindtap="qixingtap" data-markers="{{markers}}">骑行</view>
+			<view class="runLine" bindtap="buxingtap" data-markers="{{markers}}">步行</view>
+		</view>
+	</view>
+	<navigator url="../transits/transits">
+		<view class="ditu">
+		<map class="ditu-map" scale="16" markers="{{markers}}" transits="{{transits}}" longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" polyline="{{polyline}}" show-location="true"></map>
+	</view>
 	<view class="detil">
 		<view class="info">
-			<view>{{distance}}米</view>
-			<view>打车约{{cost}}元</view>
+			<view>{{distance}}</view>
+			<view>{{duration}}{{cost}}</view>
 		</view>
 		<view class="btn">
 			<view class="detilInfo">详情</view>
 		</view>
 	</view>
+	</navigator>
 </view>
